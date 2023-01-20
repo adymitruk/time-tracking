@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contractor Time Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>Contractor Time Tracker</h1>
+    <div class="tab-card">
+      <div class="tabs">
+        <button class="tab-btn" id="hours-tab" onclick="openTab('hours')">Hours</button>
+        <button class="tab-btn active" id="slices-tab" onclick="openTab('slices')">Slices</button>
+      </div>
+      <div class="tab-content" id="hours-content">
+        <form class="form-flex" method="post" action="/submit-form">
+            <label for="hours" class="label-flex">Hours worked:</label>
+            <input type="number" id="hours" name="hours" class="input-flex"><br><br>
+            <label for="notes" class="label-flex">Notes:</label>
+            <textarea id="notes" name="notes" class="input-flex"></textarea><br><br>
+            <div class="submit-btn-div">
+              <input type="submit" value="Submit" class="submit-btn">
+          </div>
+        </form>
+      </div>
+    
+      <div class="tab-content active" id="slices-content">
+        <form class="form-flex" method="post" action="/submit-form">
+            <label for="slice_name" class="label-flex">Slice Name:</label>
+            <input type="text" id="slice_name" name="slice_name" class="input-flex"><br><br>
+            <label for="notes" class="label-flex">Notes:</label>
+            <textarea id="notes" name="notes" class="input-flex"></textarea><br><br>
+            <div class="submit-btn-div">
+              <input type="submit" value="Submit" class="submit-btn">
+          </div>
+        </form>
+      </div>
+    </div>    
+    <script src="js/main.js"></script>
+  </body>
+</html>
